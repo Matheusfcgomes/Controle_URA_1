@@ -34,6 +34,7 @@ client.on('connect', function () {
   console.log('Conectado ao servidor MQTT')
 })
 
+document.getElementById("btns-frontb").ontouchstart = movePlus('FRT');
 
 function move(cmd){
     client.publish(publishTopic, cmd, { qos: 0, retain: false })
